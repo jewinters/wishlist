@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 //@ExtendWith(SpringExtension.class)
 //@WebAppConfiguration
 //@ContextConfiguration(classes = PersonController.class)
-class PersonControllerTest {
+class PeopleControllerTest {
 //    @Autowired
 //    private WebApplicationContext webApplicationContext;
 //

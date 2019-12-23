@@ -5,6 +5,7 @@ import com.winters.wishlist.repository.PersonRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -45,13 +46,12 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public List<Person> getAllPersons(int pageNumber, int pageSize) {
-        return new ArrayList<Person>();
-//        return personRepository.findAll(new PageRequest(pageNumber, pageSize)).getContent();
+    public List<Person> getAllPeople(int pageNumber, int pageSize) {
+        return personRepository.findAll(PageRequest.of(pageNumber, pageSize)).getContent();
     }
 
     @Override
-    public List<Person> getAllPersons() {
+    public List<Person> getAllPeople() {
         return personRepository.findAll();
     }
 }

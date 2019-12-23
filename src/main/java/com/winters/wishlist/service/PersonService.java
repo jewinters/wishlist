@@ -12,6 +12,6 @@ public interface PersonService {
     void deletePerson(Person person);
     void deletePerson(Long id);
 
-    List<Person> getAllPersons(int pageNumber, int pageSize);
-    List<Person> getAllPersons();
+    List<Person> getAllPeople(int pageNumber, int pageSize);
+    List<Person> getAllPeople();
 }
