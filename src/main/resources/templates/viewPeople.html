@@ -11,13 +11,21 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Link</th>
             </tr>
             <tr th:each="person : ${people}">
                 <td th:text="${person.id}"></td>
                 <td th:text="${person.name}"></td>
+                <td>
+                    <form th:action="${'/person/' + person.id}">
+                        <input type="submit" th:value="${person.name}"/>
+                    </form>
+                </td>
             </tr>
         </table>
     </div>
-    <a href="/">Home</a>
+    <form action="/">
+        <input type="submit" value="Home"/>
+    </form>
 </body>
 </html>
